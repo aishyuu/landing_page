@@ -4,11 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-a {
     color: white;
     text-decoration: none;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    filter: brightness(0.9);
+    z-index: -2;
 }
 
 .navbar {
@@ -57,7 +65,6 @@ input[type="checkbox"]:checked ~ .rightBar {
 }
 
 .hamburger {
-    color: white;
     font-size: 24px;
     justify-content: flex-end;
     position: relative;
@@ -88,4 +95,160 @@ input[type="checkbox"]:checked ~ .rightBar {
 .hoverAnimation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* Layer 1 */
+
+.layer1Container {
+    width: 85%;
+    height: 100%;
+    border-radius: 1.5rem;
+    margin: 9rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.layer1Left {
+    margin: 4rem auto 0 auto;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.greetings {
+    font-size: 2.2rem;
+    text-shadow: 0 0 0.8em rgb(255, 255, 255);
+    text-align: center;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.findNowContainer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.findScene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 4rem;
+    border: 0.2rem solid white;
+    border-radius: 2rem;
+    background-image: linear-gradient(rgba(250, 0, 0, 0.5), rgba(107, 39, 0, 0.5))
+}
+
+.layer1Right {
+    margin: 4rem 0;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layer1Image {
+    width: 50vw;
+}
+
+.layer1Caption {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.layer2Bg {
+    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));
+    margin-top: 18em;
+}
+
+.layer2Heading {
+    font-size: 2rem;
+    padding: 0.5em 1em 1.5em 1em;
+    text-align: center;
+}
+
+.layer2InfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 2.5rem;
+    flex-wrap: wrap;
+    flex: 1 1 0px;
+}
+
+.layer2Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0px;
+    margin-bottom: 2rem;
+}
+
+.linkI {
+    margin: 1rem 2rem 0 2rem;
+}
+
+.layer2ContainerImage {
+    width: 12rem;
+    height: 14rem;
+    object-fit: cover;
+    border: 0.4rem solid white;
+    border-radius: 1.5rem;
+    transition: 0.3s;
+}
+
+.layer2ContainerImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(2, 173, 164)
+}
+
+.containerSubtext {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 1100px){
+    .layer1Container {
+        flex-direction: row;
+    }
+
+    .layer1Image {
+        width: 25vw;
+    }
+
+    .layer1Left {
+        margin: 4rem auto 0 4rem;
+    }
+
+    .rightBar {
+        width: 27rem;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 0.5rem;
+        right: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .layer2InfoContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 2.5rem;
+    }
 }
